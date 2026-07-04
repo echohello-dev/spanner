@@ -30,9 +30,6 @@ export const ConnectionOfferV2Schema = z.object({
 });
 
 export type ConnectionOfferV2 = z.infer<typeof ConnectionOfferV2Schema>;
-
-/** @deprecated kept for forward compatibility with v1 clients during rollout. */
-export const ConnectionOfferSchema = ConnectionOfferV2Schema;
 export type ConnectionOffer = ConnectionOfferV2;
 
 const OFFER_FRAGMENT_PREFIX = "#offer=";

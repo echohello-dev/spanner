@@ -1,6 +1,6 @@
 import express, { type Express } from "express";
 import type { Logger } from "pino";
-import { SPANNER_PROTOCOL_VERSION } from "./protocol-version.js";
+import { SPANNER_PROTOCOL_VERSION } from "@echohello/protocol";
 
 export interface CreateHttpAppOptions {
   logger: Logger;

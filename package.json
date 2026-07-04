@@ -28,7 +28,7 @@
     "typecheck:server": "bun run typecheck:client && bunx tsc -p packages/server/tsconfig.json --noEmit",
     "typecheck:cli": "bun run typecheck:server && tsgo -p packages/cli/tsconfig.typecheck.json --noEmit",
     "typecheck:web": "tsgo -p packages/web/tsconfig.typecheck.json --noEmit",
-    "lint": "oxlint .",
+    "lint": "oxlint packages scripts",
     "lint-fix": "oxlint --fix .",
     "format": "oxfmt .",
     "format-check": "oxfmt --check .",

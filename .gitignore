@@ -79,5 +79,12 @@ packages/desktop/node_modules/
 # Generated
 packages/*/src/**/generated/
 
-# OpenCode-managed skills (auto-installed, not part of the repo)
+# Tool-installed skills and runtime state (auto-installed, not part of the repo)
 .agents/
+.opencode/
+.claude/
+.codex/
+.cursor/
+.github/hooks/
+.github/skills/
+.impeccable/

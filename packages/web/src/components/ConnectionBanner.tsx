@@ -1,5 +1,3 @@
-import type { SpannerClient } from "@echohello/client";
-
 interface Props {
   connected: boolean;
   serverId: string | null;
@@ -27,5 +25,3 @@ export function ConnectionBanner({ connected, serverId, error }: Props) {
     </header>
   );
 }
-
-export type { SpannerClient };

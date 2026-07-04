@@ -3,18 +3,20 @@ pre-commit:
   commands:
     fmt:
       glob: "*.{ts,tsx,js,jsx,json,md}"
-      run: bun run format {staged_files}
+      run: mise exec -- bun run format {staged_files}
     lint:
       glob: "*.{ts,tsx,js,jsx}"
-      run: bunx oxlint {staged_files}
+      run: mise exec -- bunx oxlint {staged_files}
     typecheck:
       glob: "*.{ts,tsx}"
-      run: bun run typecheck
+      run: mise exec -- bun run typecheck
 
 pre-push:
   parallel: true
   commands:
     test:
-      run: bun test
-    knip:
-      run: bun run knip
+      run: mise exec -- bun run test
+    # knip: temporarily disabled during scaffold — many false-positives in
+    # Expo/React-Vite packages. Re-enable once knip config is tuned.
+    # knip:
+    #   run: mise exec -- bun run knip

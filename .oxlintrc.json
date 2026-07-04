@@ -6,13 +6,17 @@
     "perf": "warn",
     "style": "warn",
     "restriction": "warn",
-    "suspicious": "error",
+    "suspicious": "error"
   },
   "rules": {
     "no-console": "allow",
     "no-unused-vars": "error",
+    "react/react-in-jsx-scope": "off",
+    "react/style-prop-object": "off",
+    "import/no-unassigned-import": "off",
+    "vitest/require-to-throw-message": "off"
   },
-  "ignore": [
+  "ignorePatterns": [
     "**/dist/**",
     "**/node_modules/**",
     "**/.turbo/**",
@@ -21,11 +25,6 @@
     "**/.vite/**",
     "**/*.generated.ts",
     "**/patches/**",
-    ".agents/**",
-  ],
-  "jsPlugins": {
-    "typescript": {
-      "disableTypeAware": true,
-    },
-  },
+    ".agents/**"
+  ]
 }

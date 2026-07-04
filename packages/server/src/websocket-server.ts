@@ -11,8 +11,7 @@ import {
   type ServerEvent,
 } from "@echohello/protocol";
 
-import { handleHello, loadOrCreateIdentity, type DaemonIdentity } from "./handshake.js";
-import { SPANNER_PROTOCOL_VERSION } from "./protocol-version.js";
+import { handleHello, type DaemonIdentity } from "./handshake.js";
 
 interface SessionRecord {
   clientId: string;
@@ -176,5 +175,3 @@ export class SpannerWebsocketServer {
     });
   }
 }
-
-export { SPANNER_PROTOCOL_VERSION, loadOrCreateIdentity };
